@@ -1,0 +1,9 @@
+package oop;
+
+public class Main {
+    public static void main(String[] args) {
+        // Membuat dan menampilkan objek GUI
+        GUI gui = new GUI();
+        gui.setVisible(true);
+    }
+}

@@ -1,0 +1,48 @@
+package oop;
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class GUI extends JFrame {
+    private JButton button;
+    private JLabel label;
+
+    // Konstruktor untuk membuat dan mengatur tampilan GUI
+    public GUI() {
+        // Mengatur judul jendela
+        setTitle("Aplikasi GUI OOP");
+        
+        // Mengatur ukuran jendela
+        setSize(300, 200);
+        
+        // Menutup aplikasi ketika jendela ditutup
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        // Mengatur layout
+        setLayout(null); // Layout ini memungkinkan penempatan manual komponen
+        
+        // Membuat tombol dan label
+        button = new JButton("Klik Saya");
+        label = new JLabel("Tunggu...");
+
+        // Menetapkan posisi dan ukuran tombol
+        button.setBounds(90, 50, 120, 30);
+        
+        // Menetapkan posisi dan ukuran label
+        label.setBounds(90, 100, 120, 30);
+        
+        // Menambahkan tombol dan label ke frame
+        add(button);
+        add(label);
+
+        // Menambahkan event handler ke tombol
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Mengubah teks label ketika tombol diklik
+                label.setText("Tombol Ditekan!");
+            }
+        });
+    }
+}
